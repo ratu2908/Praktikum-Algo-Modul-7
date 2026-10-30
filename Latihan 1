@@ -1,0 +1,20 @@
+def cek_prima(angka):
+    if angka <= 1:
+        return False
+
+    for i in range(2, angka):
+        if angka % i == 0:
+            return False
+
+    return True
+
+
+def tampilkan_hasil(angka):
+    if cek_prima(angka):
+        print(angka, "adalah bilangan Prima")
+    else:
+        print(angka, "bukanlah bilangan Prima")
+
+
+bilangan = int(input("Masukkan angka: "))
+tampilkan_hasil(bilangan)
